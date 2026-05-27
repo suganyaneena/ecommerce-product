@@ -100,15 +100,7 @@ function AdminPage() {
 
 
     try {
-        
-      // console.log(formData);
-
-      //   const response = await API.post(
-      // "/products",
-      // data
-      //   );
-
-
+    
        let response;
 
 
