@@ -5,7 +5,8 @@ function ProductCard({ product }) {
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 w-[280px]">
 
       <img
-        src={`http://localhost:5000/uploads/${product.image_url}`}
+        // src={`http://localhost:5000/uploads/${product.image_url}`}
+        src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
         alt={product.name}
         className="w-full h-[250px] object-cover"
       />
