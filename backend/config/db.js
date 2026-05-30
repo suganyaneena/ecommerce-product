@@ -13,16 +13,14 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
- connectionString: process.env.DATABASE_URL,
- ssl: {
-   rejectUnauthorized: false
- }
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
-pool.connect()
-  .then(() => console.log("DB Connected"))
-  .catch((err) => console.log("DB Error", err));
+pool.on("error", (err) => {
+  console.error("Unexpected DB Error:", err);
+});
 
 module.exports = pool;
-
-console.log("DATABASE_URL:", process.env.DATABASE_URL);
