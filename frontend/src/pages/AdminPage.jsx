@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import API from "../api/api";
-
+import { BASE_URLS } from "../config";
 import Navbar from "../components/Navbar";
 
 function AdminPage() {
@@ -247,7 +247,12 @@ function AdminPage() {
             >
 
               <img
-                src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
+
+                src={`${BASE_URLS}/uploads/${product.image_url}`}
+                // src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
+                //src={`http://localhost:5000/uploads/${product.image_url}`}
+                // src={product.image_url}
+
                 alt={product.name}
                 className="h-[200px] w-full object-cover rounded-xl"
               />

@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import { BASE_URLS } from "../config";
 
 function ProductCard({ product }) {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 w-[280px]">
 
       <img
-        src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
+
+        src={`${BASE_URLS}/uploads/${product.image_url}`}
+        //src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
+        // src={`http://localhost:5000/uploads/${product.image_url}`}
+       
         alt={product.name}
         className="w-full h-[250px] object-cover"
       />

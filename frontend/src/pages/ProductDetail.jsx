@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import API from "../api/api";
-
+import { BASE_URLS } from "../config";
 import Navbar from "../components/Navbar";
 
 function ProductDetail() {
@@ -39,7 +39,13 @@ function ProductDetail() {
         <div className="bg-white rounded-2xl shadow-lg grid md:grid-cols-2 gap-10 p-10">
 
           <img
-            src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
+
+            src={`${BASE_URLS}/uploads/${product.image_url}`}
+            //src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
+            // src={`http://localhost:5000/uploads/${product.image_url}`}
+          
+            // src={product.image_url}
+
             alt={product.name}
             // className="w-full rounded-2xl"
            className="w-full h-[250px] object-cover rounded-2xl"
