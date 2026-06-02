@@ -40,9 +40,6 @@ function ProductDetail() {
 
           <img
             src={`https://ecommerce-product-1h77.onrender.com/uploads/${product.image_url}`}
-            // src={`http://localhost:5000/uploads/${product.image_url}`}
-          
-            // src={product.image_url}
             alt={product.name}
             // className="w-full rounded-2xl"
            className="w-full h-[250px] object-cover rounded-2xl"
